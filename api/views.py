@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 import environ
+from rest_framework.response import Response
 import os
 
 # Create your views here.
@@ -20,4 +21,4 @@ def get_record(request):
 
     print(gl_db_server, gl_db_username, gl_db_password, gl_db_name)
 
-    return HttpResponse(gl_db_server, gl_db_username, gl_db_password, gl_db_name)
+    return Response(gl_db_server, gl_db_username, gl_db_password, gl_db_name)
