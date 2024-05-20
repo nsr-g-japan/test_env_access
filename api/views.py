@@ -20,5 +20,6 @@ gl_db_password = env('HOST_DB_PASSWORD')
 def get_record(request):
 
     print(gl_db_server, gl_db_username, gl_db_password, gl_db_name)
+    suc_resp = {"data": [gl_db_server, gl_db_username, gl_db_password, gl_db_name]}
+    return Response(suc_resp, status=200)
 
-    return Response(gl_db_server, gl_db_username, gl_db_password, gl_db_name)
